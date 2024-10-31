@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1d99475e5d94f5e9703eeece78c97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0.5
 --- !u!114 &1262365939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,9 +645,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1262365932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48394dbd5d447424bad06e43f3867a48, type: 3}
+  m_Script: {fileID: 11500000, guid: 367a8a408c4a947edaace41f2df20161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 1262365932}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

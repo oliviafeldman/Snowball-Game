@@ -7,34 +7,39 @@ public class BallGrowthController : MonoBehaviour
     public GameObject ball;
     private SphereCollider sphereCollider;
 
+    private BallMovementController movementController;
+    private BallTerrainDetection terrainDetection;
+
+    public float scaleSpeed = 0.5f;
+
     void Start()
     {
         scaleChange = Vector3.zero;
         sphereCollider = gameObject.GetComponent<SphereCollider>();
+        movementController = gameObject.GetComponent<BallMovementController>();
+        terrainDetection = gameObject.GetComponent<BallTerrainDetection>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() {
+        if (terrainDetection.terrainType == "Snow" && movementController.isMoving) {
+            startGrowing();
+        } else {
+            stopGrowing();
+        }
+
+        if (scaleChange != Vector3.zero) {
+            ball.transform.localScale += scaleChange * Time.deltaTime;
+        }
+    }
+
+    public void startGrowing() 
     {
-
+        scaleChange = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
     }
 
-    public void setMoving() 
-    {
-        scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
-    }
-
-    public void setStationary()
+    public void stopGrowing()
     {
         scaleChange = Vector3.zero;
-    }
-
-
-    private void OnCollisionStay(Collision other) {
-    if (other.collider.tag=="Snow");
-
-        ball.transform.localScale += scaleChange;
-
     }
 
 }
