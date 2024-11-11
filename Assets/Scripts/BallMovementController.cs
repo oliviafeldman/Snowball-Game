@@ -1,42 +1,35 @@
+using System;
+using System.Runtime.InteropServices;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class BallMovementController : MonoBehaviour
 {
     public float speed = 5f;
     private Rigidbody rigBod;
-    private BallGrowthController growthController;
+
+    public bool isMoving;
 
     private void Start()
     {
         rigBod = gameObject.GetComponent<Rigidbody>();
-        growthController = gameObject.GetComponent<BallGrowthController>();
+        isMoving = false;
     }
 
     private void Update()
     {
-        if (Input.GetAxis("Horizontal") > 0)
-        {
-            rigBod.AddForce(Vector3.right * speed);
-            growthController.setMoving();
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");  
+
+        if (moveHorizontal > 0 || moveVertical > 0) {
+            isMoving = true;
+        } else if (moveHorizontal == 0 && moveVertical == 0) {
+            isMoving = false;
         }
-        else if (Input.GetAxis("Horizontal") < 0)
-        {
-            rigBod.AddForce(Vector3.left * speed);
-            growthController.setMoving();
-        }
-        else if (Input.GetAxis("Vertical") > 0)
-        {
-            rigBod.AddForce(Vector3.forward * speed);
-            growthController.setMoving();
-        }
-        else if (Input.GetAxis("Vertical") < 0)
-        {
-            rigBod.AddForce(Vector3.back * speed);
-            growthController.setMoving();
-        }
-        else
-        {
-            growthController.setStationary();
-        }
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        transform.Translate(movement * speed * Time.deltaTime, Space.World);
+
     }
 }    
