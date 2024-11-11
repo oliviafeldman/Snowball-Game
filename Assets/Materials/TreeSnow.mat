@@ -118,15 +118,15 @@ Material:
     - _PathBlending: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimPower: 8
+    - _RimPower: 0.1
     - _Smoothness: 0.494
     - _SmoothnessTextureChannel: 0
     - _SnowDepth: 36.9
     - _SnowHeight: 0
     - _SnowTextureOpacity: 0.41
     - _SnowTextureScale: 0.3
-    - _SparkCutoff: 5.62
-    - _SparkleScale: 4.48
+    - _SparkCutoff: 8.67
+    - _SparkleScale: 8.36
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1

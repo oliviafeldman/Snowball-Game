@@ -41,13 +41,13 @@ Material:
     - _NoiseScale: 0.04
     - _NoiseWeight: 0.15
     - _PathBlending: 3
-    - _RimPower: 19.8
+    - _RimPower: 14.8
     - _SnowDepth: 35.3
     - _SnowHeight: 0.88
     - _SnowTextureOpacity: 0.76
     - _SnowTextureScale: 0.48
     - _SparkCutoff: 0.42
-    - _SparkleScale: 1.15
+    - _SparkleScale: 1.2
     - _Tess: 21.3
     m_Colors:
     - _Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}

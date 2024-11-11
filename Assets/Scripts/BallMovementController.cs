@@ -10,6 +10,8 @@ public class BallMovementController : MonoBehaviour
 
     public bool isMoving;
 
+    public float maxVelocity;
+
     private void Start()
     {
         rigBod = gameObject.GetComponent<Rigidbody>();
@@ -29,7 +31,11 @@ public class BallMovementController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        rigBod.AddForce(movement * speed);
+
+        if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {    
+            rigBod.linearVelocity *= 0.99f;
+        }
 
     }
 }    
