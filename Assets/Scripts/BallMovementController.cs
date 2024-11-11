@@ -21,14 +21,14 @@ public class BallMovementController : MonoBehaviour
     private void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");  
+        float moveVertical = Input.GetAxis("Vertical");
 
         if (moveHorizontal > 0 || moveVertical > 0) {
             isMoving = true;
         } else if (moveHorizontal == 0 && moveVertical == 0) {
             isMoving = false;
         }
-
+        
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rigBod.AddForce(movement * speed);
@@ -36,6 +36,5 @@ public class BallMovementController : MonoBehaviour
         if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {    
             rigBod.linearVelocity *= 0.99f;
         }
-
     }
 }    
