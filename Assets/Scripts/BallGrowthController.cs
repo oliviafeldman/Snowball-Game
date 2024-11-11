@@ -27,6 +27,10 @@ public class BallGrowthController : MonoBehaviour
             stopGrowing();
         }
 
+        if (terrainDetection.terrainType == "Fire") {
+            startShrinking();
+        }
+
         if (scaleChange != Vector3.zero) {
             ball.transform.localScale += scaleChange * Time.deltaTime;
         }
@@ -40,6 +44,10 @@ public class BallGrowthController : MonoBehaviour
     public void stopGrowing()
     {
         scaleChange = Vector3.zero;
+    }
+
+    public void startShrinking() {
+        scaleChange = new Vector3(scaleSpeed * -1, scaleSpeed * -1, scaleSpeed * -1);
     }
 
 }

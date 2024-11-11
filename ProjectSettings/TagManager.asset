@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Snow
+  - Fire
   layers:
   - Default
   - TransparentFX
