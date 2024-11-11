@@ -25,6 +25,7 @@ public class BallMovementController : MonoBehaviour
             isMoving = true;
         } else if (moveHorizontal == 0 && moveVertical == 0) {
             isMoving = false;
+            rigBod.linearVelocity = new Vector3(0, rigBod.linearVelocity.y, 0);
         }
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
