@@ -23,9 +23,9 @@ public class BallMovementController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        if (moveHorizontal > 0 || moveVertical > 0) {
+        if (moveHorizontal != 0 || moveVertical != 0) {
             isMoving = true;
-        } else if (moveHorizontal == 0 && moveVertical == 0) {
+        } else {
             isMoving = false;
         }
         
