@@ -2,22 +2,18 @@ using UnityEngine;
 
 public class BallGrowthController : MonoBehaviour
 {
-    
-    private Vector3 scaleChange;
-    public GameObject ball;
-    private SphereCollider sphereCollider;
 
     private BallMovementController movementController;
     private BallTerrainDetection terrainDetection;
-
-    public float scaleSpeed = 0.5f;
+    private BallWeightController weightController;
+    private BallSizeController sizeController;
 
     void Start()
     {
-        scaleChange = Vector3.zero;
-        sphereCollider = gameObject.GetComponent<SphereCollider>();
         movementController = gameObject.GetComponent<BallMovementController>();
         terrainDetection = gameObject.GetComponent<BallTerrainDetection>();
+        weightController = gameObject.GetComponent<BallWeightController>();
+        sizeController = gameObject.GetComponent<BallSizeController>();
     }
 
     void Update() {
@@ -27,19 +23,26 @@ public class BallGrowthController : MonoBehaviour
             stopGrowing();
         }
 
-        if (scaleChange != Vector3.zero) {
-            ball.transform.localScale += scaleChange * Time.deltaTime;
+        if (terrainDetection.terrainType == "Fire") {
+            startShrinking();
         }
     }
 
     public void startGrowing() 
     {
-        scaleChange = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
+        weightController.gainWeight();
+        sizeController.gainSize();
     }
 
     public void stopGrowing()
     {
-        scaleChange = Vector3.zero;
+        weightController.steadyWeight();
+        sizeController.steadySize();
+    }
+
+    public void startShrinking() {
+        weightController.loseWeight();
+        sizeController.loseSize();
     }
 
 }

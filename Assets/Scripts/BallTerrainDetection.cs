@@ -19,5 +19,9 @@ public class BallTerrainDetection : MonoBehaviour
 
             terrainType = "Ground";
         }
+
+        if (other.collider.tag=="Fire") {
+            terrainType = "Fire";
+        }
     }
 }    
