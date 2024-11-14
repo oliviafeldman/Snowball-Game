@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1675787343659221250}
   - component: {fileID: 6065908312485665119}
   - component: {fileID: 4310799013929500286}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +121,59 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &5507236756359667077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267601116516215565}
+  - component: {fileID: 1309288928589076066}
+  m_Layer: 7
+  m_Name: FireRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &267601116516215565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507236756359667077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6360420542703049432}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1309288928589076066
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507236756359667077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.6286354
+  m_Center: {x: -0.8, y: 1, z: 0}
 --- !u!1 &6360420542244127411
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +185,7 @@ GameObject:
   - component: {fileID: 6360420542244127410}
   - component: {fileID: 6360420542244127404}
   - component: {fileID: 6360420542244127405}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Fire_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4985,8 +5038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6360420542703049432}
   - component: {fileID: 8062804077698705208}
-  - component: {fileID: 4410457299655639393}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Yellow-FireWood
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -5009,6 +5061,7 @@ Transform:
   - {fileID: 6360420542814166453}
   - {fileID: 6360420542244127410}
   - {fileID: 1675787343659221250}
+  - {fileID: 267601116516215565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8062804077698705208
@@ -5032,27 +5085,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2704809, y: 1.3753368, z: 1}
   m_Center: {x: -0.80088574, y: 0.7943202, z: 0}
---- !u!135 &4410457299655639393
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6360420542703049433}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.6286354
-  m_Center: {x: -0.8, y: 1, z: 0}
 --- !u!1 &6360420542814166458
 GameObject:
   m_ObjectHideFlags: 0
@@ -5064,7 +5096,7 @@ GameObject:
   - component: {fileID: 6360420542814166453}
   - component: {fileID: 6360420542814166455}
   - component: {fileID: 6360420542814166452}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GFX
   m_TagString: Fire
   m_Icon: {fileID: 0}
