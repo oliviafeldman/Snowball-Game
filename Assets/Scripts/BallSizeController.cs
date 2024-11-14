@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class BallSizeController : MonoBehaviour
 {
+    public static BallSizeController Instance;
+    public float CurrentScale => transform.localScale.x;
+
     public GameObject ball;
     public float scaleSpeed = 0.1f;
 
@@ -10,6 +13,7 @@ public class BallSizeController : MonoBehaviour
 
     void Start()
     {
+        Instance = this;
         scaleChange = Vector3.zero;
     }
 

@@ -7,6 +7,7 @@ public class BallGrowthController : MonoBehaviour
     private BallTerrainDetection terrainDetection;
     private BallWeightController weightController;
     private BallSizeController sizeController;
+    private BallFireDetector fireDetector;
 
     void Start()
     {
@@ -14,16 +15,17 @@ public class BallGrowthController : MonoBehaviour
         terrainDetection = gameObject.GetComponent<BallTerrainDetection>();
         weightController = gameObject.GetComponent<BallWeightController>();
         sizeController = gameObject.GetComponent<BallSizeController>();
+        fireDetector = gameObject.GetComponent<BallFireDetector>();
     }
 
     void Update() {
-        if (terrainDetection.terrainType == "Snow" && movementController.isMoving) {
+        if (terrainDetection.terrainType == "Snow" && movementController.isMoving && fireDetector.ballStatus != "Melting") {
             startGrowing();
         } else {
             stopGrowing();
         }
 
-        if (terrainDetection.terrainType == "Fire") {
+        if (fireDetector.ballStatus == "Melting") {
             startShrinking();
         }
     }

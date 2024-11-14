@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1675787343659221250}
   - component: {fileID: 6065908312485665119}
   - component: {fileID: 4310799013929500286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 6360420542244127410}
   - component: {fileID: 6360420542244127404}
   - component: {fileID: 6360420542244127405}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4985,7 +4985,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6360420542703049432}
   - component: {fileID: 8062804077698705208}
-  m_Layer: 0
+  - component: {fileID: 4410457299655639393}
+  m_Layer: 7
   m_Name: Yellow-FireWood
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -5029,8 +5030,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2704809, y: 1.0065372, z: 1}
-  m_Center: {x: -0.80088574, y: 0.9787172, z: 0}
+  m_Size: {x: 1.2704809, y: 1.3753368, z: 1}
+  m_Center: {x: -0.80088574, y: 0.7943202, z: 0}
+--- !u!135 &4410457299655639393
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6360420542703049433}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.6286354
+  m_Center: {x: -0.8, y: 1, z: 0}
 --- !u!1 &6360420542814166458
 GameObject:
   m_ObjectHideFlags: 0
@@ -5042,7 +5064,7 @@ GameObject:
   - component: {fileID: 6360420542814166453}
   - component: {fileID: 6360420542814166455}
   - component: {fileID: 6360420542814166452}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GFX
   m_TagString: Fire
   m_Icon: {fileID: 0}
