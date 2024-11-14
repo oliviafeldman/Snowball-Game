@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using JetBrains.Annotations;
 using UnityEngine;
 
+
 public class BallMovementController : MonoBehaviour
 {
     public float speed = 5f;
@@ -17,7 +18,9 @@ public class BallMovementController : MonoBehaviour
         rigBod = gameObject.GetComponent<Rigidbody>();
         isMoving = false;
     }
-
+    
+    //audio
+    
     private void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -37,4 +40,5 @@ public class BallMovementController : MonoBehaviour
             rigBod.linearVelocity *= 0.99f;
         }
     }
+    
 }    
