@@ -10,13 +10,18 @@ public class BallTerrainDetection : MonoBehaviour
 
     private void OnCollisionStay(Collision other) {
         if (other.collider.tag=="Snow") {
+
             terrainType = "Snow";
+
         }
 
         if (other.collider.tag=="Ground") {
+
             terrainType = "Ground";
         }
 
+        if (other.collider.tag=="Fire") {
+            terrainType = "Fire";
+        }
     }
-
 }    
