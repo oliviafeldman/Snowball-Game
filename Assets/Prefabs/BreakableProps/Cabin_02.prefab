@@ -373,7 +373,7 @@ MonoBehaviour:
   - {fileID: 189208}
   - {fileID: 111744}
   - {fileID: 116842}
-  baseForce: 2
+  baseForce: 0
   radiusMultiplier: 2
   damageThreshold: 5
   boxCollider: {fileID: 5553669113948275473}
