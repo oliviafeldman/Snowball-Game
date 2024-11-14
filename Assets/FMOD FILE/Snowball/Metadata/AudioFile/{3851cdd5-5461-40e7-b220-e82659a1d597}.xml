@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3851cdd5-5461-40e7-b220-e82659a1d597}">
+		<property name="assetPath">
+			<value>sledding-on-snow-sliding-on-snow-snow-and-sledding-16590.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.263999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b0a3ec66-f77a-40d3-9107-7304b018f730}</destination>
+		</relationship>
+	</object>
+</objects>
