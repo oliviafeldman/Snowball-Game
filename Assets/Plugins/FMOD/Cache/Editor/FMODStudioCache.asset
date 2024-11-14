@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638671236892921213
+  lastModified: 638671979293881633
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 197504
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -35,13 +35,15 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 3754362185434140617}
   - {fileID: -4025790394249107889}
-  EditorEvents: []
+  - {fileID: 7032780255330179431}
+  EditorEvents:
+  - {fileID: 7624205484938029008}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4025790394249107889}
   StringsBanks:
   - {fileID: 3754362185434140617}
-  cacheTime: 638671236892961668
+  cacheTime: 638671979294297805
   cacheVersion: 131620
 --- !u!114 &3754362185434140617
 MonoBehaviour:
@@ -58,8 +60,56 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638671236892961668
+  lastModified: 638671979293926821
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 824
   Exists: 1
+--- !u!114 &7032780255330179431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/ballRollingEvent.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Studio/Snowball/Build/Desktop/ballRollingEvent.bank
+  Name: ballRollingEvent
+  StudioPath: bank:/ballRollingEvent
+  lastModified: 638671979294297805
+  FileSizes:
+  - Name: Desktop
+    Value: 196992
+  Exists: 1
+--- !u!114 &7624205484938029008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ballRollingEvent
+  m_EditorClassIdentifier: 
+  Path: event:/ballRollingEvent
+  Guid:
+    Data1: 508241854
+    Data2: 1195379160
+    Data3: 621357755
+    Data4: -573241010
+  Banks:
+  - {fileID: 7032780255330179431}
+  - {fileID: -4025790394249107889}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 15264
