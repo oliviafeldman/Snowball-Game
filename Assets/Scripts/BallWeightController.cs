@@ -9,9 +9,12 @@ public class BallWeightController : MonoBehaviour
 
     private float weightChange;
 
+    public BallSizeController ballSizeController;
+
     void Start()
     {
         rigidbody = gameObject.GetComponent<Rigidbody>();
+        ballSizeController = GetComponent<BallSizeController>();
         weightChange = 0;
     }
 
@@ -34,6 +37,10 @@ public class BallWeightController : MonoBehaviour
 
     public void loseWeight() 
     {
-        weightChange = weightSpeed * -3;
+        if (ballSizeController.ShouldShrink()) {
+            weightChange = weightSpeed * -3;
+        } else {
+            weightChange = 0;
+        }
     }
 }
