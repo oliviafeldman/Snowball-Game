@@ -881,7 +881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6360420542703049432, guid: 8fcb9d2d43929c04f8c70c38581418d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.344552
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: 6360420542703049432, guid: 8fcb9d2d43929c04f8c70c38581418d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1422,15 +1422,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 570036627452203009, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.56
+      value: -1.51
       objectReference: {fileID: 0}
     - target: {fileID: 570036627452203009, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7945518
+      value: -5.25
       objectReference: {fileID: 0}
     - target: {fileID: 570036627452203009, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5447693
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 570036627452203009, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1468,7 +1468,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6838818183326951443, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+    - {fileID: 2560286615707057295, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+    - {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+    - {fileID: 6263249521036858804, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+    - {fileID: 6050133617233207846, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+    - {fileID: 4124434457155317466, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+    - {fileID: 8977394433327930237, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
