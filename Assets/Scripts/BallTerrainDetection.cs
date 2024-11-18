@@ -12,16 +12,20 @@ public class BallTerrainDetection : MonoBehaviour
         if (other.collider.tag=="Snow") {
 
             terrainType = "Snow";
-
         }
 
-        if (other.collider.tag=="Ground") {
+        else if (other.collider.tag=="Ground") {
 
             terrainType = "Ground";
         }
 
-        if (other.collider.tag=="Fire") {
+        else if (other.collider.tag=="Fire") {
             terrainType = "Fire";
         }
+
+        else {
+            terrainType = "Ground";
+        }
+
     }
 }    
