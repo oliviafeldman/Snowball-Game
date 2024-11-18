@@ -375,7 +375,7 @@ MonoBehaviour:
   - {fileID: 116842}
   baseForce: 0
   radiusMultiplier: 2
-  damageThreshold: 5
+  sizeThreshold: 3
   boxCollider: {fileID: 5553669113948275473}
 --- !u!1 &157142
 GameObject:
@@ -919,5 +919,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.5118268, y: 5.972293, z: 2.3712537}
-  m_Center: {x: 0.12868166, y: 0.00000035762793, z: 0.7297883}
+  m_Size: {x: 2.1343222, y: 5.5346875, z: 1.556873}
+  m_Center: {x: 0.16993475, y: 0.026286125, z: 0.72998273}

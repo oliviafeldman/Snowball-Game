@@ -7,6 +7,8 @@ public class BallSizeController : MonoBehaviour
     public float scaleSpeed = 0.1f;
 
     public float minSize = 5f;
+    
+    public float maxSize = 20f;
 
     private Vector3 scaleChange;
 
@@ -31,9 +33,17 @@ public class BallSizeController : MonoBehaviour
         return ball.transform.localScale.x > minSize;
     }
 
+    public bool ShouldGrow() {
+        return ball.transform.localScale.x < maxSize;
+    }
+
     public void gainSize() 
     {
-        scaleChange = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
+        if (ShouldGrow()) {
+            scaleChange = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
+        } else {
+            scaleChange = Vector3.zero;
+        }
     }
 
     public void steadySize()

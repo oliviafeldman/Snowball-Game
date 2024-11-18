@@ -5042,7 +5042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1d99475e5d94f5e9703eeece78c97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   isMoving: 0
   maxVelocity: 0
 --- !u!114 &7471297768871393858
@@ -5070,7 +5070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 902e3d8b5d3ae45068e56a98413bafc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weightSpeed: 0.03
+  weightSpeed: 0.01
+  ballSizeController: {fileID: 0}
 --- !u!114 &6263249521036858804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5085,6 +5086,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 6285272179230956371}
   scaleSpeed: 0.1
+  minSize: 0.5
+  maxSize: 10
 --- !u!114 &4124434457155317466
 MonoBehaviour:
   m_ObjectHideFlags: 0

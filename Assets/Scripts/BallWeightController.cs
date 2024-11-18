@@ -27,7 +27,11 @@ public class BallWeightController : MonoBehaviour
     
     public void gainWeight() 
     {
-        weightChange = weightSpeed;
+        if (ballSizeController.ShouldGrow()) {
+            weightChange = weightSpeed;
+        } else {
+            weightChange = 0;
+        }
     }
 
     public void steadyWeight()
