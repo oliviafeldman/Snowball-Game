@@ -152,5 +152,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 447a9764cb2b2464fbb73840ee811c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeThreshold: 3
+  sizeThreshold: 30
   treeRigidbody: {fileID: 0}

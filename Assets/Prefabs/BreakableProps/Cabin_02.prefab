@@ -327,12 +327,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.633092, y: 1.7478638, z: 5.675793}
-  m_Center: {x: 0.09942484, y: 0.37393165, z: -2.337897}
+  m_Size: {x: 4.009418, y: 3.781605, z: 6.869424}
+  m_Center: {x: 0.058637183, y: 1.390803, z: -2.690506}
 --- !u!65 &458701334059189647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   - {fileID: 116842}
   baseForce: 0
   radiusMultiplier: 2
-  sizeThreshold: 3
+  sizeThreshold: 30
   boxCollider: {fileID: 5553669113948275473}
 --- !u!1 &157142
 GameObject:
