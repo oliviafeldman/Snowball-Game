@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Snow
   - Fire
+  - Wall
   layers:
   - Default
   - TransparentFX
