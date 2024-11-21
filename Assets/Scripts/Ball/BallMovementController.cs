@@ -8,19 +8,24 @@ public class BallMovementController : MonoBehaviour
 {
     public float speed = 5f;
     private Rigidbody rigBod;
+    
+    [SerializeField]
+    private float gravityScaler = 1.05f;
 
-    public float gravityMultiplier = 3f;
+    private Vector3 originalGravity;
 
     public bool isMoving;
 
     public float maxVelocity;
 
+    private BallTerrainDetection ballTerrainDetection;
+
     private void Start()
     {
         rigBod = gameObject.GetComponent<Rigidbody>();
         isMoving = false;
-
-        Physics.gravity *= gravityMultiplier;
+        originalGravity = Physics.gravity;
+        ballTerrainDetection = GetComponent<BallTerrainDetection>();
     }
     
     //audio
@@ -40,9 +45,21 @@ public class BallMovementController : MonoBehaviour
 
         rigBod.AddForce(movement * speed);
 
-        if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {    
-            rigBod.linearVelocity *= 0.99f;
+        float clampedX = Mathf.Clamp(rigBod.linearVelocity.x, -maxVelocity, maxVelocity);
+        float clampedZ = Mathf.Clamp(rigBod.linearVelocity.z, -maxVelocity, maxVelocity);
+        rigBod.linearVelocity = new Vector3(clampedX, rigBod.linearVelocity.y, clampedZ);
+
+        //if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {    
+            //rigBod.linearVelocity *= 0.99f;
+        //}
+
+        if (ballTerrainDetection.terrainType == "Air") {
+            Physics.gravity *= gravityScaler;
+        } else {
+            Physics.gravity = originalGravity;
         }
+
+
     }
     
 }    
