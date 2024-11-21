@@ -8,7 +8,7 @@ public class SetInteractiveShaderEffects : MonoBehaviour
     RenderTexture rt;
     [SerializeField]
     Transform target;
-    // Start is called before the first frame update
+
     void Awake()
     {
         Shader.SetGlobalTexture("_GlobalEffectRT", rt);
