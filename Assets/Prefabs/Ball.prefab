@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 879867999462338279}
   - component: {fileID: 1547595280767317007}
   - component: {fileID: 8500608249487747812}
+  - component: {fileID: 1750949335252594572}
   m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6069881260376655838}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4861,6 +4862,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1750949335252594572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6069881260376655838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820c445db498b4d36beff643c308986b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 570036627452203009}
+  particleEffect: {fileID: 879867999462338279}
 --- !u!1 &6285272179230956371
 GameObject:
   m_ObjectHideFlags: 0
@@ -4873,7 +4888,6 @@ GameObject:
   - component: {fileID: 126165175549709197}
   - component: {fileID: 4618072860252609259}
   - component: {fileID: 9128448868731390362}
-  - component: {fileID: 6838818183326951443}
   - component: {fileID: 8977394433327930237}
   - component: {fileID: 2560286615707057295}
   - component: {fileID: 6942552621568509654}
@@ -4883,7 +4897,7 @@ GameObject:
   - component: {fileID: 4124434457155317466}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4935,7 +4949,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55003d8793f84ef45899029379d6f732, type: 2}
+  - {fileID: 2100000, guid: 87557b0bc1c2649bba6243b9c79b633d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4978,19 +4992,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6838818183326951443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6285272179230956371}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38cadeb087a7a4f139090cb46f8ae36a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!54 &8977394433327930237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4999,9 +5000,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6285272179230956371}
   serializedVersion: 4
-  m_Mass: 0.5
+  m_Mass: 0.7
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -5042,7 +5043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1d99475e5d94f5e9703eeece78c97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
+  gravityMultiplier: 1
   isMoving: 0
   maxVelocity: 0
 --- !u!114 &7471297768871393858
@@ -5085,9 +5087,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 6285272179230956371}
-  scaleSpeed: 0.1
+  scaleSpeed: 0.2
   minSize: 0.5
-  maxSize: 10
+  maxSize: 5
 --- !u!114 &4124434457155317466
 MonoBehaviour:
   m_ObjectHideFlags: 0

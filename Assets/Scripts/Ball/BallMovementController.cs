@@ -9,6 +9,8 @@ public class BallMovementController : MonoBehaviour
     public float speed = 5f;
     private Rigidbody rigBod;
 
+    public float gravityMultiplier = 3f;
+
     public bool isMoving;
 
     public float maxVelocity;
@@ -17,6 +19,8 @@ public class BallMovementController : MonoBehaviour
     {
         rigBod = gameObject.GetComponent<Rigidbody>();
         isMoving = false;
+
+        Physics.gravity *= gravityMultiplier;
     }
     
     //audio
