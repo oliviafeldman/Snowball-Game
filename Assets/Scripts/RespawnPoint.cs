@@ -12,12 +12,12 @@ public class RespawnPoint : MonoBehaviour
         }
     }
 
-    public void Respawn(GameObject obj)
+    public void Respawn()
     {
-        obj.transform.position = respawnLocation.position;
-        obj.transform.rotation = respawnLocation.rotation;
+        transform.position = respawnLocation.position;
+        transform.rotation = respawnLocation.rotation;
 
-        Rigidbody rb = obj.GetComponent<Rigidbody>();
+        Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
