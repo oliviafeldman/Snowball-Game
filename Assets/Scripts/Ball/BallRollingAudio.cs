@@ -15,7 +15,7 @@ public class BallRollingAudio : MonoBehaviour
         if (AudioManager.instance != null)
         {
             rollingSoundInstance = AudioManager.instance.CreateInstance(ballRollingEvent);
-            rollingSoundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position)); // Set initial position
+            rollingSoundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position)); 
             rollingSoundInstance.start();
             rollingSoundInstance.setPaused(true);
         }
