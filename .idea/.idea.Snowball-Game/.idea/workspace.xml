@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="21aa8289-8c84-4f49-9d83-d8246ae33f62" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snowball-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snowball-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kyle Objects.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kyle Objects.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kyle's Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kyle's Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallRollingAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallRollingAudio.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/LampPost.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LampPost.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +104,8 @@
       <workItem from="1731527179348" duration="2250000" />
       <workItem from="1731592849119" duration="568000" />
       <workItem from="1731593442433" duration="866000" />
-      <workItem from="1731939888951" duration="3833000" />
+      <workItem from="1731939888951" duration="4488000" />
+      <workItem from="1732198106693" duration="1921000" />
     </task>
     <servers />
   </component>
@@ -123,6 +119,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
