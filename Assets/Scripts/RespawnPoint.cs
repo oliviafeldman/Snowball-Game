@@ -24,4 +24,13 @@ public class RespawnPoint : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
         }
     }
+
+    public void UpdateRespawnLocation(Transform newRespawnLocation)
+    {
+        if (newRespawnLocation != null)
+        {
+            respawnLocation = newRespawnLocation;
+        }
+
+    }
 }

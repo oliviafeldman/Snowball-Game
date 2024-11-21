@@ -10,19 +10,20 @@ public class Breakable : MonoBehaviour
 
     private bool hasBroken = false;
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         if (hasBroken) return;
 
-        Collider collider = collision.collider;
-        Vector3 colliderSize = collider.bounds.size;
+        Vector3 colliderSize = other.bounds.size;
 
         float colliderVolume = colliderSize.x * colliderSize.y * colliderSize.z;
 
-        if (colliderVolume > sizeThreshold)
+        if (colliderVolume > sizeThreshold && other.tag == "Player")
         {
-            Vector3 impactPoint = collision.GetContact(0).point;
+            Vector3 impactPoint = other.ClosestPoint(transform.position);
+
             BreakCabin(impactPoint);
+
             hasBroken = true;
             boxCollider.enabled = false;
         }
