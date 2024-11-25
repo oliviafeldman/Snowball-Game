@@ -8166,7 +8166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  gravityMultiplier: 1.5
+  gravityScaler: 1.015
   isMoving: 0
   maxVelocity: 0
 --- !u!114 &1591010209
