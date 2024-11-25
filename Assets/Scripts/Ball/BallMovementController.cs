@@ -77,8 +77,3 @@ public class BallMovementController : MonoBehaviour
    }
   
 }   
-
-
-
-
-
