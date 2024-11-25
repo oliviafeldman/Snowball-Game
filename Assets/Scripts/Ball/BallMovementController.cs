@@ -10,7 +10,7 @@ public class BallMovementController : MonoBehaviour
     private Rigidbody rigBod;
     
     [SerializeField]
-    private float gravityScaler = 1.05f;
+    private float gravityScaler = 1.015f;
 
     private Vector3 originalGravity;
 
@@ -45,13 +45,13 @@ public class BallMovementController : MonoBehaviour
 
         rigBod.AddForce(movement * speed);
 
-        float clampedX = Mathf.Clamp(rigBod.linearVelocity.x, -maxVelocity, maxVelocity);
-        float clampedZ = Mathf.Clamp(rigBod.linearVelocity.z, -maxVelocity, maxVelocity);
-        rigBod.linearVelocity = new Vector3(clampedX, rigBod.linearVelocity.y, clampedZ);
+        //float clampedX = Mathf.Clamp(rigBod.linearVelocity.x, -maxVelocity, maxVelocity);
+        //float clampedZ = Mathf.Clamp(rigBod.linearVelocity.z, -maxVelocity, maxVelocity);
+        //rigBod.linearVelocity = new Vector3(clampedX, rigBod.linearVelocity.y, clampedZ);
 
-        //if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {    
-            //rigBod.linearVelocity *= 0.99f;
-        //}
+        if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {    
+            rigBod.linearVelocity *= 0.99f;
+        }
 
         if (ballTerrainDetection.terrainType == "Air") {
             Physics.gravity *= gravityScaler;

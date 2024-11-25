@@ -24,7 +24,7 @@ public class BallTerrainDetection : MonoBehaviour
         }
 
         else {
-            terrainType = "Ground";
+            terrainType = "Air";
         }
 
     }
