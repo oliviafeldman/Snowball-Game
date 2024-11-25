@@ -4895,6 +4895,8 @@ GameObject:
   - component: {fileID: 6050133617233207846}
   - component: {fileID: 6263249521036858804}
   - component: {fileID: 4124434457155317466}
+  - component: {fileID: 7940084771009262733}
+  - component: {fileID: 883318790111757635}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -5107,3 +5109,30 @@ MonoBehaviour:
   fireLayerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &7940084771009262733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285272179230956371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27428aca641754b0fb245d87b227003f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnLocation: {fileID: 0}
+--- !u!114 &883318790111757635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285272179230956371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dacf5e58153e4c5c906105835057016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPoint: {fileID: 7940084771009262733}
+  fallThreshold: -10
