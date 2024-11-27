@@ -6403,7 +6403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012848826022, guid: 78af3a7aad589fa49b8fb946c9e57362, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.539665
+      value: -50.08
       objectReference: {fileID: 0}
     - target: {fileID: 4000012848826022, guid: 78af3a7aad589fa49b8fb946c9e57362, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8562,6 +8562,30 @@ PrefabInstance:
     - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: gravityMultiplier
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471297768871393858, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: raycastDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471297768871393858, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471297768871393858, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: groundLayers.m_Bits
+      value: 513
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471297768871393858, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: groundLayers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471297768871393858, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: groundLayers.Array.data[0].m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471297768871393858, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: groundLayers.Array.data[1].m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

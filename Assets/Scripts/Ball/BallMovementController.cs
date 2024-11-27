@@ -66,8 +66,8 @@ public class BallMovementController : MonoBehaviour
        }
 
 
-       if (ballTerrainDetection.terrainType == "Air") {
-            if (Physics.gravity.x < maxGravity) {
+       if (ballTerrainDetection.terrainType == "Untagged") {
+            if (Physics.gravity.y < maxGravity) {
                 Physics.gravity *= gravityScaler;
             }
        } else {

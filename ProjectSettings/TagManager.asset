@@ -8,6 +8,7 @@ TagManager:
   - Fire
   - Wall
   - Ground
+  - Tree
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Snow
   - ShaderEffects
   - Fire
-  - 
+  - Ground
   - 
   - 
   - 
