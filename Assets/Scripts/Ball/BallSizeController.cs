@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BallSizeController : MonoBehaviour
 {
@@ -10,20 +11,25 @@ public class BallSizeController : MonoBehaviour
     
     public float maxSize = 20f;
 
+    public Slider sizeSlider;
+
     private Vector3 scaleChange;
 
 
     void Start()
     {
         scaleChange = Vector3.zero;
+        sizeSlider.value = ball.transform.localScale.x;
+        sizeSlider.minValue = minSize;
+        sizeSlider.maxValue = maxSize;
     }
 
     void Update()
     {
         if (scaleChange != Vector3.zero) {
             ball.transform.localScale += scaleChange * Time.deltaTime;
+            sizeSlider.value = ball.transform.localScale.x;
         }
-
         if (!ShouldShrink()) {
 
         }
