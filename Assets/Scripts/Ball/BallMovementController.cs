@@ -22,6 +22,7 @@ public class BallMovementController : MonoBehaviour
 
 
    public float maxVelocity;
+   public float maxGravity;
 
 
    private BallTerrainDetection ballTerrainDetection;
@@ -55,9 +56,9 @@ public class BallMovementController : MonoBehaviour
        rigBod.AddForce(movement * speed);
 
 
-       //float clampedX = Mathf.Clamp(rigBod.linearVelocity.x, -maxVelocity, maxVelocity);
-       //float clampedZ = Mathf.Clamp(rigBod.linearVelocity.z, -maxVelocity, maxVelocity);
-       //rigBod.linearVelocity = new Vector3(clampedX, rigBod.linearVelocity.y, clampedZ);
+       float clampedX = Mathf.Clamp(rigBod.linearVelocity.x, -maxVelocity, maxVelocity);
+       float clampedZ = Mathf.Clamp(rigBod.linearVelocity.z, -maxVelocity, maxVelocity);
+       rigBod.linearVelocity = new Vector3(clampedX, rigBod.linearVelocity.y, clampedZ);
 
 
        if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {   
@@ -66,7 +67,9 @@ public class BallMovementController : MonoBehaviour
 
 
        if (ballTerrainDetection.terrainType == "Air") {
-           Physics.gravity *= gravityScaler;
+            if (Physics.gravity.x < maxGravity) {
+                Physics.gravity *= gravityScaler;
+            }
        } else {
            Physics.gravity = originalGravity;
        }
