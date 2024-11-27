@@ -8437,7 +8437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: maxVelocity
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: gravityMultiplier
