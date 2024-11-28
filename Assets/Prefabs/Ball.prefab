@@ -4869,7 +4869,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6069881260376655838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 820c445db498b4d36beff643c308986b, type: 3}
   m_Name: 
@@ -5002,9 +5002,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6285272179230956371}
   serializedVersion: 4
-  m_Mass: 0.7
-  m_Drag: 0
-  m_AngularDrag: 0
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -5045,10 +5045,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1d99475e5d94f5e9703eeece78c97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  gravityMultiplier: 1
+  speed: 5
+  gravityScaler: 1.015
   isMoving: 0
-  maxVelocity: 0
+  maxVelocity: 5
+  maxGravity: 20
 --- !u!114 &7471297768871393858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5092,6 +5093,7 @@ MonoBehaviour:
   scaleSpeed: 0.2
   minSize: 0.5
   maxSize: 5
+  sizeSlider: {fileID: 0}
 --- !u!114 &4124434457155317466
 MonoBehaviour:
   m_ObjectHideFlags: 0
