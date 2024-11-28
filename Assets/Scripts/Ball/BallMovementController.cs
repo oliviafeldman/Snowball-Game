@@ -1,82 +1,69 @@
 using System;
-using System.Runtime.InteropServices;
-using JetBrains.Annotations;
 using UnityEngine;
-
-
-
 
 public class BallMovementController : MonoBehaviour
 {
-   public float speed = 5f;
-   private Rigidbody rigBod;
-  
-   [SerializeField]
-   private float gravityScaler = 1.015f;
+    public float speed = 5f;
+    private Rigidbody rigBod;
 
+    [SerializeField]
+    private float gravityScaler = 1.015f;
 
-   private Vector3 originalGravity;
+    public bool isMoving;
 
+    public float maxVelocity = 10f;
+    public float maxGravity = 20f;
 
-   public bool isMoving;
+    private Vector3 originalGravity;
 
+    private BallTerrainDetection ballTerrainDetection;
 
-   public float maxVelocity;
-   public float maxGravity;
+    private void Start()
+    {
+        rigBod = gameObject.GetComponent<Rigidbody>();
+        isMoving = false;
+        originalGravity = Physics.gravity;
+        ballTerrainDetection = GetComponent<BallTerrainDetection>();
+    }
 
+    private void Update()
+    {
+        HandleMovement();
+        LimitVelocity();
+        HandleGravity();
+    }
 
-   private BallTerrainDetection ballTerrainDetection;
+    private void HandleMovement()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
+        isMoving = moveHorizontal != 0 || moveVertical != 0;
 
-   private void Start()
-   {
-       rigBod = gameObject.GetComponent<Rigidbody>();
-       isMoving = false;
-       originalGravity = Physics.gravity;
-       ballTerrainDetection = GetComponent<BallTerrainDetection>();
-   }
-  
-   //audio
-  
-   private void Update()
-   {
-       float moveHorizontal = Input.GetAxis("Horizontal");
-       float moveVertical = Input.GetAxis("Vertical");
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        rigBod.AddForce(movement * speed);
+    }
 
+    private void LimitVelocity()
+    {
+        Vector3 velocity = rigBod.linearVelocity;
+        velocity.x = Mathf.Clamp(velocity.x, -maxVelocity, maxVelocity);
+        velocity.z = Mathf.Clamp(velocity.z, -maxVelocity, maxVelocity);
+        rigBod.linearVelocity = velocity;
+    }
 
-       if (moveHorizontal != 0 || moveVertical != 0) {
-           isMoving = true;
-       } else {
-           isMoving = false;
-       }
-      
-       Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-
-       rigBod.AddForce(movement * speed);
-
-
-       float clampedX = Mathf.Clamp(rigBod.linearVelocity.x, -maxVelocity, maxVelocity);
-       float clampedZ = Mathf.Clamp(rigBod.linearVelocity.z, -maxVelocity, maxVelocity);
-       rigBod.linearVelocity = new Vector3(clampedX, rigBod.linearVelocity.y, clampedZ);
-
-
-       if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {   
-           rigBod.linearVelocity *= 0.99f;
-       }
-
-
-       if (ballTerrainDetection.terrainType == "Untagged") {
-            if (Physics.gravity.y < maxGravity) {
+    private void HandleGravity()
+    {
+        if (ballTerrainDetection.terrainType == "Untagged")
+        {
+            if (Physics.gravity.y > -maxGravity)
+            {
                 Physics.gravity *= gravityScaler;
             }
-       } else {
-           Physics.gravity = originalGravity;
-       }
-
-
-
-
-   }
-  
-}   
+        }
+        else
+        {
+            Physics.gravity = originalGravity;
+        }
+    }
+}
