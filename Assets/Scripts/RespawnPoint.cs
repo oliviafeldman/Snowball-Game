@@ -2,20 +2,19 @@ using UnityEngine;
 
 public class RespawnPoint : MonoBehaviour
 {
-    public Transform respawnLocation;
+    public Vector3 respawnLocation;
 
     void Start()
     {
         if (respawnLocation == null)
         {
-            respawnLocation = transform;
+            respawnLocation = transform.position;
         }
     }
 
     public void Respawn()
     {
-        transform.position = respawnLocation.position;
-        transform.rotation = respawnLocation.rotation;
+        transform.position = respawnLocation;
 
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
@@ -25,7 +24,7 @@ public class RespawnPoint : MonoBehaviour
         }
     }
 
-    public void UpdateRespawnLocation(Transform newRespawnLocation)
+    public void UpdateRespawnLocation(Vector3 newRespawnLocation)
     {
         if (newRespawnLocation != null)
         {
