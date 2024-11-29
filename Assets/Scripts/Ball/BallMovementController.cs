@@ -52,7 +52,7 @@ public class BallMovementController : MonoBehaviour
         {
             if (Physics.gravity.y > -maxGravity)
             {
-                Physics.gravity *= (1 + gravityScaler * Time.deltaTime);
+                Physics.gravity *= Mathf.Pow(gravityScaler, Time.deltaTime);
             }
         }
         else
