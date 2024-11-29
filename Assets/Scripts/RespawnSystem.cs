@@ -17,5 +17,9 @@ public class PlayerRespawnSystem : MonoBehaviour
         {
             respawnPoint.Respawn();
         }
+
+        if (Input.GetKeyDown(KeyCode.R)) {
+            respawnPoint.Respawn();
+        }
     }
 }
