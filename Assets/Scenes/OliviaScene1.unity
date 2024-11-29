@@ -3176,11 +3176,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: speed
-      value: 9
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: maxVelocity
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: gravityScaler
-      value: 1.01
+      value: 1.015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
