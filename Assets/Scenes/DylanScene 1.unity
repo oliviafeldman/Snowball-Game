@@ -1229,15 +1229,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6273610544324509440, guid: 92db7640471bafe4b9a154208807d8de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56.090836
+      value: -65.29
       objectReference: {fileID: 0}
     - target: {fileID: 6273610544324509440, guid: 92db7640471bafe4b9a154208807d8de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 73.509285
+      value: 72.12
       objectReference: {fileID: 0}
     - target: {fileID: 6273610544324509440, guid: 92db7640471bafe4b9a154208807d8de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 61.289993
+      value: 60.13
       objectReference: {fileID: 0}
     - target: {fileID: 6273610544324509440, guid: 92db7640471bafe4b9a154208807d8de, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10306,6 +10306,22 @@ PrefabInstance:
     - target: {fileID: 6285272179230956371, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: speed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: maxGravity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: maxVelocity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942552621568509654, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: gravityScaler
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
