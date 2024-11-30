@@ -10,7 +10,7 @@ public class Checkpoint : MonoBehaviour
 
             if (respawnPoint != null)
             {
-                respawnPoint.UpdateRespawnLocation(transform);
+                respawnPoint.UpdateRespawnLocation(transform.position);
             }
         }
     }

@@ -5,22 +5,16 @@ public class BallMovementController : MonoBehaviour
 {
     public float speed = 5f;
     private Rigidbody rigBod;
-
-    [SerializeField]
-    private float gravityScaler = 1.015f;
-
+    [SerializeField] private float gravityScaler = 1.015f;
     public bool isMoving;
-
     public float maxVelocity = 10f;
     public float maxGravity = 20f;
-
     private Vector3 originalGravity;
-
     private BallTerrainDetection ballTerrainDetection;
 
     private void Start()
     {
-        rigBod = gameObject.GetComponent<Rigidbody>();
+        rigBod = GetComponent<Rigidbody>();
         isMoving = false;
         originalGravity = Physics.gravity;
         ballTerrainDetection = GetComponent<BallTerrainDetection>();
@@ -41,7 +35,7 @@ public class BallMovementController : MonoBehaviour
         isMoving = moveHorizontal != 0 || moveVertical != 0;
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        rigBod.AddForce(movement * speed);
+        rigBod.AddForce(movement * speed * Time.deltaTime, ForceMode.Acceleration);
     }
 
     private void LimitVelocity()
@@ -58,7 +52,7 @@ public class BallMovementController : MonoBehaviour
         {
             if (Physics.gravity.y > -maxGravity)
             {
-                Physics.gravity *= gravityScaler;
+                Physics.gravity *= Mathf.Pow(gravityScaler, Time.deltaTime);
             }
         }
         else

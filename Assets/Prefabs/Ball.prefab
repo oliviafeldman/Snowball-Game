@@ -5045,11 +5045,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1d99475e5d94f5e9703eeece78c97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  gravityScaler: 1.015
+  speed: 1000
+  gravityScaler: 2
   isMoving: 0
-  maxVelocity: 5
-  maxGravity: 20
+  maxVelocity: 100
+  maxGravity: 100
 --- !u!114 &7471297768871393858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5123,7 +5123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27428aca641754b0fb245d87b227003f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnLocation: {fileID: 0}
+  respawnLocation: {x: 0, y: 0, z: 0}
 --- !u!114 &883318790111757635
 MonoBehaviour:
   m_ObjectHideFlags: 0
