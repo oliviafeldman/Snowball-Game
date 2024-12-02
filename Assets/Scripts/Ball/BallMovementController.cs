@@ -1,48 +1,63 @@
 using System;
-using System.Runtime.InteropServices;
-using JetBrains.Annotations;
 using UnityEngine;
-
 
 public class BallMovementController : MonoBehaviour
 {
     public float speed = 5f;
     private Rigidbody rigBod;
-
-    public float gravityMultiplier = 3f;
-
+    [SerializeField] private float gravityScaler = 1.015f;
     public bool isMoving;
-
-    public float maxVelocity;
+    public float maxVelocity = 10f;
+    public float maxGravity = 20f;
+    private Vector3 originalGravity;
+    private BallTerrainDetection ballTerrainDetection;
 
     private void Start()
     {
-        rigBod = gameObject.GetComponent<Rigidbody>();
+        rigBod = GetComponent<Rigidbody>();
         isMoving = false;
-
-        Physics.gravity *= gravityMultiplier;
+        originalGravity = Physics.gravity;
+        ballTerrainDetection = GetComponent<BallTerrainDetection>();
     }
-    
-    //audio
-    
+
     private void Update()
+    {
+        HandleMovement();
+        LimitVelocity();
+        HandleGravity();
+    }
+
+    private void HandleMovement()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        if (moveHorizontal != 0 || moveVertical != 0) {
-            isMoving = true;
-        } else {
-            isMoving = false;
-        }
-        
+        isMoving = moveHorizontal != 0 || moveVertical != 0;
+
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        rigBod.AddForce(movement * speed * Time.deltaTime, ForceMode.Acceleration);
+    }
 
-        rigBod.AddForce(movement * speed);
+    private void LimitVelocity()
+    {
+        Vector3 velocity = rigBod.linearVelocity;
+        velocity.x = Mathf.Clamp(velocity.x, -maxVelocity, maxVelocity);
+        velocity.z = Mathf.Clamp(velocity.z, -maxVelocity, maxVelocity);
+        rigBod.linearVelocity = velocity;
+    }
 
-        if (rigBod.linearVelocity.sqrMagnitude > maxVelocity ) {    
-            rigBod.linearVelocity *= 0.99f;
+    private void HandleGravity()
+    {
+        if (ballTerrainDetection.terrainType == "Untagged")
+        {
+            if (Physics.gravity.y > -maxGravity)
+            {
+                Physics.gravity *= Mathf.Pow(gravityScaler, Time.deltaTime);
+            }
+        }
+        else
+        {
+            Physics.gravity = originalGravity;
         }
     }
-    
-}    
+}
