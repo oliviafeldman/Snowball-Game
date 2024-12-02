@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using FMOD.Studio;
 using UnityEngine;
 
 #if UNITY_URP_EXIST
@@ -1183,7 +1184,7 @@ retry:
 #endif
         }
 
-        public static FMOD.Studio.EventInstance CreateInstance(EventReference eventReference)
+        public static EventInstance CreateInstance(EventReference eventReference)
         {
             try
             {

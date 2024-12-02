@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/ballRollingEvent.bank
   Name: ballRollingEvent
   StudioPath: bank:/ballRollingEvent
-  lastModified: 638672009725154451
+  lastModified: 638687560857534207
   FileSizes:
   - Name: Desktop
-    Value: 196992
+    Value: 197472
   Exists: 1
 --- !u!114 &-6953071185674514470
 MonoBehaviour:
@@ -63,10 +63,30 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638672009724793079
+  lastModified: 638687560857906036
   FileSizes:
   - Name: Desktop
-    Value: 197504
+    Value: 198016
+  Exists: 1
+--- !u!114 &-2362221000933712330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/fireCrackleEvent.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Studio/Snowball/Build/Desktop/fireCrackleEvent.bank
+  Name: fireCrackleEvent
+  StudioPath: bank:/fireCrackleEvent
+  lastModified: 638687565133136389
+  FileSizes:
+  - Name: Desktop
+    Value: 397504
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -84,14 +104,16 @@ MonoBehaviour:
   - {fileID: 3754362185434140617}
   - {fileID: -4025790394249107889}
   - {fileID: -7931131524815353575}
+  - {fileID: -2362221000933712330}
   EditorEvents:
   - {fileID: -6953071185674514470}
+  - {fileID: 4492647777584093543}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4025790394249107889}
   StringsBanks:
   - {fileID: 3754362185434140617}
-  cacheTime: 638672009725154451
+  cacheTime: 638687565133136389
   cacheVersion: 131620
 --- !u!114 &3754362185434140617
 MonoBehaviour:
@@ -108,8 +130,35 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638672009724828237
+  lastModified: 638687560857936046
   FileSizes:
   - Name: Desktop
-    Value: 824
+    Value: 930
   Exists: 1
+--- !u!114 &4492647777584093543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/fireCrackleEvent
+  m_EditorClassIdentifier: 
+  Path: event:/fireCrackleEvent
+  Guid:
+    Data1: 64263190
+    Data2: 1220245788
+    Data3: 338904198
+    Data4: 1916194273
+  Banks:
+  - {fileID: -2362221000933712330}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 29779
