@@ -227,7 +227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038146973, y: -22.047415}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -8.939009}
   m_SizeDelta: {x: 374.65, y: 223.6512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &83468999
@@ -250,8 +250,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to Snowventure! Traverse the wonderful world of Snowballville by
-    using WASD!
+  m_text: "Welcome to Snowventure! Traverse the wonderful world of Snowballville
+    by using WASD! Things to expect in the next update: \n- Better/More Levels!\n-
+    Audio and great feel!\n- A better camera!\n- Informative Size-ometer!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -278,14 +279,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.69
-  m_fontSizeBase: 31.69
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
