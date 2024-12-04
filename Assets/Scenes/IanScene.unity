@@ -2041,14 +2041,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PausingCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6132817506062779687, guid: 5bbe3f3ba1c20bb489b6022f450499b7, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -988370554, guid: 8e0ba74eb6f474ec188218d7e6c129bf, type: 3}
-    - target: {fileID: 8714614945724092738, guid: 5bbe3f3ba1c20bb489b6022f450499b7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 60.15625
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
