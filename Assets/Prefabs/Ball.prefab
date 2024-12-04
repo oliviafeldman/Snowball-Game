@@ -4897,6 +4897,8 @@ GameObject:
   - component: {fileID: 4124434457155317466}
   - component: {fileID: 7940084771009262733}
   - component: {fileID: 883318790111757635}
+  - component: {fileID: 278830551217276389}
+  - component: {fileID: 1242075855933857825}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -5050,6 +5052,7 @@ MonoBehaviour:
   isMoving: 0
   maxVelocity: 100
   maxGravity: 100
+  velocityThreshold: 0.5
 --- !u!114 &7471297768871393858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5138,3 +5141,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 7940084771009262733}
   fallThreshold: -10
+--- !u!114 &278830551217276389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285272179230956371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518ec51da36394461bc7920dfe660877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WallMaterial: {fileID: 2100000, guid: 78bd8fe97639f4abda54cdb3f4b7b8a4, type: 2}
+  Camera: {fileID: 0}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 1
+  growthSpeed: 1
+  maxSize: 0.5
+--- !u!114 &1242075855933857825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285272179230956371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518ec51da36394461bc7920dfe660877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WallMaterial: {fileID: 2100000, guid: 1ec19859205554bb3a87ae5e2f7c046e, type: 2}
+  Camera: {fileID: 0}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 1
+  growthSpeed: 1
+  maxSize: 0.5

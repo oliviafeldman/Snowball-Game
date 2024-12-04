@@ -8,10 +8,13 @@ public class CircleSync : MonoBehaviour
     public static int PosID = Shader.PropertyToID("_Position");
     public static float SizeID = Shader.PropertyToID("_Size");
     public Material WallMaterial;
-    public Material SnowMaterial;
     public CinemachineCamera Camera;
 
     public LayerMask Mask;
+
+    private float currentSize = 0f;
+    public float growthSpeed = 1f;
+    public float maxSize = 0.5f;
 
     void Update()
     {
@@ -19,12 +22,11 @@ public class CircleSync : MonoBehaviour
         var ray = new Ray(transform.position, dir.normalized);
 
         if (Physics.Raycast(ray, 3000, Mask)) {
-            WallMaterial.SetFloat((int)SizeID, 0.5f);
-            SnowMaterial.SetFloat((int)SizeID, 0.5f);
+            currentSize = Mathf.MoveTowards(currentSize, maxSize, growthSpeed * Time.deltaTime);
         } else {
-            WallMaterial.SetFloat((int)SizeID, 0);
-            SnowMaterial.SetFloat((int)SizeID, 0);
+            currentSize = Mathf.MoveTowards(currentSize, 0f, growthSpeed * Time.deltaTime);
         }
-        
+
+        WallMaterial.SetFloat((int)SizeID, currentSize);
     }
 }

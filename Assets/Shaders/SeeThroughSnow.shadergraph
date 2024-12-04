@@ -2083,10 +2083,10 @@
     "m_CustomSlotLabel": "",
     "m_DismissedVersion": 0,
     "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
+    "overrideHLSLDeclaration": true,
+    "hlslDeclarationOverride": 2,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 0.5,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2324,10 +2324,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -717.0000610351563,
-            "y": -353.5000305175781,
+            "x": -716.9999389648438,
+            "y": -353.4999694824219,
             "width": 97.0,
-            "height": 34.0001220703125
+            "height": 33.999969482421878
         }
     },
     "m_Slots": [
