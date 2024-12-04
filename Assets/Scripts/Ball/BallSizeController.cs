@@ -19,10 +19,11 @@ public class BallSizeController : MonoBehaviour
     void Start()
     {
         scaleChange = Vector3.zero;
-        sizeSlider.value = ball.transform.localScale.x;
+        sizeSlider.value = 2f;
         sizeSlider.minValue = minSize;
         sizeSlider.maxValue = maxSize;
     }
+
 
     void Update()
     {
@@ -33,6 +34,11 @@ public class BallSizeController : MonoBehaviour
         if (!ShouldShrink()) {
 
         }
+    }
+
+    public Vector3 GetScaleChange()
+    {
+        return scaleChange;
     }
 
     public bool ShouldShrink() {
