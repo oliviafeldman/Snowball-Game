@@ -9,6 +9,8 @@ public class BallMovementController : MonoBehaviour
     public bool isMoving;
     public float maxVelocity = 10f;
     public float maxGravity = 20f;
+
+    public float velocityThreshold = 0.5f;
     private Vector3 originalGravity;
     private BallTerrainDetection ballTerrainDetection;
 
@@ -32,7 +34,7 @@ public class BallMovementController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        isMoving = moveHorizontal != 0 || moveVertical != 0;
+        isMoving = rigBod.linearVelocity.magnitude > velocityThreshold;
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rigBod.AddForce(movement * speed * Time.deltaTime, ForceMode.Acceleration);
