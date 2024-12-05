@@ -5,9 +5,9 @@ public class ButtonManager : MonoBehaviour
 {
     public GameObject Controls;
     private bool IsShowingControls = false; 
-    public void LoadLevelsPage()
+    public void LoadFrostyFrolic()
     {
-        SceneManager.LoadScene("Levels Page");
+        SceneManager.LoadScene("FrostyFrolic");
     }
 
     public void ToggleControls()
