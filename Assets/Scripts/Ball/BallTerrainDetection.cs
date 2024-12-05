@@ -15,7 +15,6 @@ public class BallTerrainDetection : MonoBehaviour
 
     private void OnCollisionStay(Collision other) {
         terrainType = other.collider.gameObject.tag;
-
     }
 
 }    
