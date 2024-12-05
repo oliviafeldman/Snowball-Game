@@ -126,6 +126,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 278830551217276389, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1720796757}
     - target: {fileID: 570036627452203009, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.736983
@@ -166,6 +170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1242075855933857825, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1720796757}
     - target: {fileID: 6263249521036858804, guid: fc134b9b7c6ca4a2497b1433373a6036, type: 3}
       propertyPath: sizeSlider
       value: 
@@ -7659,6 +7667,7 @@ MonoBehaviour:
   isMoving: 0
   maxVelocity: 0
   maxGravity: 20
+  velocityThreshold: 0.5
 --- !u!114 &1176791388
 MonoBehaviour:
   m_ObjectHideFlags: 0
