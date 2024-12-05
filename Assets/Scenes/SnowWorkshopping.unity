@@ -1932,6 +1932,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1674732584764012590, guid: 5bbe3f3ba1c20bb489b6022f450499b7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5812911577065349429, guid: 5bbe3f3ba1c20bb489b6022f450499b7, type: 3}
       propertyPath: m_Name
       value: PausingCanvas
