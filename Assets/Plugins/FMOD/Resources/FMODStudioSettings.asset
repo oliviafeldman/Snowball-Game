@@ -780,7 +780,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - ballRollingEvent
+  - ballSFX
   - fireCrackleEvent
   BanksToLoad: []
   LiveUpdatePort: 9264

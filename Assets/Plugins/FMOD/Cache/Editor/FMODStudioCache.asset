@@ -1,25 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7931131524815353575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/ballRollingEvent.bank
-  m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/Snowball/Build/Desktop/ballRollingEvent.bank
-  Name: ballRollingEvent
-  StudioPath: bank:/ballRollingEvent
-  lastModified: 638687560857534207
-  FileSizes:
-  - Name: Desktop
-    Value: 197472
-  Exists: 1
 --- !u!114 &-6953071185674514470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,7 +19,7 @@ MonoBehaviour:
     Data3: 621357755
     Data4: -573241010
   Banks:
-  - {fileID: -7931131524815353575}
+  - {fileID: -4230820492604998079}
   - {fileID: -4025790394249107889}
   IsStream: 1
   Is3D: 1
@@ -48,6 +28,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 15264
+--- !u!114 &-4230820492604998079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/ballSFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Studio/Snowball/Build/Desktop/ballSFX.bank
+  Name: ballSFX
+  StudioPath: bank:/ballSFX
+  lastModified: 638690085010939798
+  FileSizes:
+  - Name: Desktop
+    Value: 1742016
+  Exists: 1
 --- !u!114 &-4025790394249107889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638687560857906036
+  lastModified: 638690085011500825
   FileSizes:
   - Name: Desktop
     Value: 198016
@@ -83,11 +83,38 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/fireCrackleEvent.bank
   Name: fireCrackleEvent
   StudioPath: bank:/fireCrackleEvent
-  lastModified: 638687565133136389
+  lastModified: 638690059264731124
   FileSizes:
   - Name: Desktop
     Value: 397504
   Exists: 1
+--- !u!114 &-642804820600390246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ballThudEvent
+  m_EditorClassIdentifier: 
+  Path: event:/ballThudEvent
+  Guid:
+    Data1: 1347948030
+    Data2: 1195128379
+    Data3: 1414818213
+    Data4: -1120103220
+  Banks:
+  - {fileID: -4230820492604998079}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,17 +130,19 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 3754362185434140617}
   - {fileID: -4025790394249107889}
-  - {fileID: -7931131524815353575}
   - {fileID: -2362221000933712330}
+  - {fileID: -4230820492604998079}
   EditorEvents:
   - {fileID: -6953071185674514470}
   - {fileID: 4492647777584093543}
+  - {fileID: -642804820600390246}
+  - {fileID: 8813943227368399551}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4025790394249107889}
   StringsBanks:
   - {fileID: 3754362185434140617}
-  cacheTime: 638687565133136389
+  cacheTime: 638690085011547625
   cacheVersion: 131620
 --- !u!114 &3754362185434140617
 MonoBehaviour:
@@ -130,10 +159,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638687560857936046
+  lastModified: 638690085011547625
   FileSizes:
   - Name: Desktop
-    Value: 930
+    Value: 1010
   Exists: 1
 --- !u!114 &4492647777584093543
 MonoBehaviour:
@@ -162,3 +191,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 29779
+--- !u!114 &8813943227368399551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: -538272120
+    Data2: 1315049439
+    Data3: -750195321
+    Data4: -560379254
+  Banks:
+  - {fileID: -4230820492604998079}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108068
