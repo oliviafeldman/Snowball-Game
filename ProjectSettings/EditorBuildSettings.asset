@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FrostyFrolic.unity
     guid: 244a4e87da0e0475bb32abde4a4a3f86
   - enabled: 1
-    path: Assets/Scenes/ClaireScene2.unity
+    path: Assets/Scenes/MerryMaze.unity
     guid: 368f4d88ebc8d4cfe9d95c70538245af
   - enabled: 1
     path: Assets/Scenes/PolarPlatforms.unity
