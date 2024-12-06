@@ -5039,6 +5039,7 @@ GameObject:
   - component: {fileID: 6360420542703049432}
   - component: {fileID: 8062804077698705208}
   - component: {fileID: 4410457299655639393}
+  - component: {fileID: -7466696246040798927}
   m_Layer: 0
   m_Name: Yellow-FireWood
   m_TagString: Fire
@@ -5107,6 +5108,25 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.6286354
   m_Center: {x: -0.8, y: 1, z: 0}
+--- !u!114 &-7466696246040798927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6360420542703049433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b427d1f8f2192864a86832b99fbcf3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireCrackleEvent:
+    Guid:
+      Data1: 64263190
+      Data2: 1220245788
+      Data3: 338904198
+      Data4: 1916194273
+    Path: event:/fireCrackleEvent
 --- !u!1 &6360420542814166458
 GameObject:
   m_ObjectHideFlags: 0

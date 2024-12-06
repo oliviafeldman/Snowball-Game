@@ -4899,6 +4899,9 @@ GameObject:
   - component: {fileID: 883318790111757635}
   - component: {fileID: 278830551217276389}
   - component: {fileID: 1242075855933857825}
+  - component: {fileID: 9211987219790956923}
+  - component: {fileID: 1345867407288113000}
+  - component: {fileID: -3073225920352923251}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -5179,3 +5182,59 @@ MonoBehaviour:
     m_Bits: 1
   growthSpeed: 1
   maxSize: 0.5
+--- !u!114 &9211987219790956923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285272179230956371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673d1b49499a02342bf2fccd72a60264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRollingEvent:
+    Guid:
+      Data1: 508241854
+      Data2: 1195379160
+      Data3: 621357755
+      Data4: -573241010
+    Path: event:/ballRollingEvent
+  maxVelocity: 70
+  minVelocityThreshold: 2
+  fadeSpeed: 10
+--- !u!114 &1345867407288113000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285272179230956371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
+--- !u!114 &-3073225920352923251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285272179230956371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397ca67b8d882e54fbb33f932da63b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thudSoundEvent:
+    Guid:
+      Data1: 1347948030
+      Data2: 1195128379
+      Data3: 1414818213
+      Data4: -1120103220
+    Path: event:/ballThudEvent
+  minImpactForce: 9

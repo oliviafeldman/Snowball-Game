@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public EventInstance CreateInstance(EventReference eventReference)
