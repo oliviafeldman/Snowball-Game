@@ -1,7 +1,5 @@
 using Unity.Cinemachine;
-using UnityEditor.PackageManager;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class CircleSync : MonoBehaviour
 {
