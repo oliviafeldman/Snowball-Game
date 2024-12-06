@@ -5201,9 +5201,8 @@ MonoBehaviour:
       Data3: 621357755
       Data4: -573241010
     Path: event:/ballRollingEvent
-  maxVelocity: 70
-  minVelocityThreshold: 3
-  fadeSpeed: 1
+  maxVelocity: 20
+  minVelocityThreshold: 0.1
 --- !u!114 &1345867407288113000
 MonoBehaviour:
   m_ObjectHideFlags: 0

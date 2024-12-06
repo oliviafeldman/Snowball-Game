@@ -4,15 +4,13 @@ using FMODUnity;
 
 public class BallRollingAudio : MonoBehaviour
 {
-    [SerializeField] private EventReference ballRollingEvent;
+    [SerializeField] private EventReference ballRollingEvent; // FMOD Event for the rolling sound
     private EventInstance rollingSoundInstance;
     private Rigidbody rb;
     private bool isGrounded = false;
 
-    // Adjustable parameters for fade-out behavior
-    [SerializeField] private float maxVelocity = 5f;       // Velocity at which volume is maxed out
-    [SerializeField] private float minVelocityThreshold = 0.05f; // Velocity below which sound stops
-    [SerializeField] private float fadeSpeed = 10f;       // Speed at which volume fades out
+    [SerializeField] private float maxVelocity = 5f;       // Velocity at which volume reaches 1
+    [SerializeField] private float minVelocityThreshold = 0.1f; // Velocity below which volume is 0
 
     private void Start()
     {
@@ -23,7 +21,7 @@ public class BallRollingAudio : MonoBehaviour
             rollingSoundInstance = AudioManager.instance.CreateInstance(ballRollingEvent);
             rollingSoundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position)); 
             rollingSoundInstance.start();
-            rollingSoundInstance.setPaused(true); // Initially paused
+            rollingSoundInstance.setPaused(true); // Start the sound paused
         }
         else
         {
@@ -44,15 +42,15 @@ public class BallRollingAudio : MonoBehaviour
             {
                 rollingSoundInstance.setPaused(false);
 
-                // Adjust volume smoothly based on velocity
+                // Map velocity to volume between 0 and 1
                 float normalizedVelocity = Mathf.Clamp01(velocityMagnitude / maxVelocity);
                 rollingSoundInstance.setParameterByName("Volume", normalizedVelocity);
             }
-            else if (velocityMagnitude <= minVelocityThreshold || !isGrounded)
+            else
             {
-                // Fade out the volume quickly when stopping
+                // Pause the sound if velocity is below threshold or not grounded
+                rollingSoundInstance.setPaused(true);
                 rollingSoundInstance.setParameterByName("Volume", 0f);
-                rollingSoundInstance.setPaused(true); // Pause the sound when it's fully faded
             }
         }
     }
