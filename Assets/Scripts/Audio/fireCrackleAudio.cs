@@ -22,17 +22,15 @@ public class FireCrackleAudio : MonoBehaviour
             return;
         }
 
-        // Create an EventInstance from the EventReference
         fireCrackleInstance = AudioManager.instance.CreateInstance(fireCrackleEvent);
 
-        // Set 3D attributes for the fire's position and start the sound
         fireCrackleInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
         fireCrackleInstance.start();
     }
 
     void Update()
     {
-        // Update 3D attributes for positional audio
+
         if (fireCrackleInstance.isValid())
         {
             fireCrackleInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));

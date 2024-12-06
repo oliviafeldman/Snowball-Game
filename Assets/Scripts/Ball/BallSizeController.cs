@@ -31,9 +31,6 @@ public class BallSizeController : MonoBehaviour
             ball.transform.localScale += scaleChange * Time.deltaTime;
             sizeSlider.value = ball.transform.localScale.x;
         }
-        if (!ShouldShrink()) {
-
-        }
     }
 
     public Vector3 GetScaleChange()

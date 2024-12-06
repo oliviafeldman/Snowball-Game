@@ -43,12 +43,11 @@ public class BallRollingAudio : MonoBehaviour
     }
     private void OnCollisionStay(Collision collision)
     {
-        // Set isGrounded to true if the ball is in contact with any collider
         isGrounded = true;
     }
 
     private void OnCollisionExit(Collision collision)
-    {    // Set isGrounded to false when the ball leaves contact with the ground
+    {   
         isGrounded = false;
     }
 

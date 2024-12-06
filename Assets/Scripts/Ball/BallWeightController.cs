@@ -3,7 +3,7 @@ using UnityEngine;
 public class BallWeightController : MonoBehaviour
 {
 
-    private Rigidbody rigidbody;
+    private Rigidbody Rigidbody;
 
     public float weightSpeed = 0.03f;
 
@@ -13,7 +13,7 @@ public class BallWeightController : MonoBehaviour
 
     void Start()
     {
-        rigidbody = gameObject.GetComponent<Rigidbody>();
+        Rigidbody = gameObject.GetComponent<Rigidbody>();
         ballSizeController = GetComponent<BallSizeController>();
         weightChange = 0;
     }
@@ -21,7 +21,7 @@ public class BallWeightController : MonoBehaviour
     void Update()
     {
         if (weightChange != 0) {
-            rigidbody.mass += weightChange*Time.deltaTime;
+            Rigidbody.mass += weightChange*Time.deltaTime;
         }
     }
     
