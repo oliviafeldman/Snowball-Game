@@ -11,8 +11,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Home()
     {
-        //NEED TO CHANGE WHEN SCENE NAME CHANGES
-        SceneManager.LoadScene("KeelinScene");
+        SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
     }
     public void Resume()
