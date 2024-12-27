@@ -43,7 +43,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/ballSFX.bank
   Name: ballSFX
   StudioPath: bank:/ballSFX
-  lastModified: 638691152011119520
+  lastModified: 638690864011119520
   FileSizes:
   - Name: Desktop
     Value: 1742016
@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638691152011451058
+  lastModified: 638690864011451058
   FileSizes:
   - Name: Desktop
     Value: 198016
@@ -83,7 +83,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/fireCrackleEvent.bank
   Name: fireCrackleEvent
   StudioPath: bank:/fireCrackleEvent
-  lastModified: 638691141401841080
+  lastModified: 638690853401841080
   FileSizes:
   - Name: Desktop
     Value: 397504
@@ -142,7 +142,7 @@ MonoBehaviour:
   - {fileID: -4025790394249107889}
   StringsBanks:
   - {fileID: 3754362185434140617}
-  cacheTime: 638691152011481129
+  cacheTime: 638690864011481129
   cacheVersion: 131620
 --- !u!114 &3754362185434140617
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Snowball/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638691152011481129
+  lastModified: 638690864011481129
   FileSizes:
   - Name: Desktop
     Value: 1010
